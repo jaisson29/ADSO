@@ -1,0 +1,13 @@
+entero a
+inicio
+	escriba "Ingrese un numero: "
+	lea a
+	si a = 100 entonces
+		escriba "El numero es igual a 100"
+	sino si a < 100 entonces
+		escriba "El numero es menor a 100"
+	sino
+		escriba "El numero es mayor a 100"
+		fin si
+	fin si
+fin

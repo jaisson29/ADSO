@@ -1,0 +1,191 @@
+ Dfd (c)
+1
+1
+1
+0
+0
+6
+3
+6
+opcion
+1
+0
+1
+j
+1
+0
+1
+k
+1
+0
+6
+2
+1
+l
+1
+0
+9
+operacion
+1
+0
+4
+1
+59
+ 'Escriba un numero segun la operacion que quiere realizar'
+4
+1
+17
+'1) Suma (J + K)'
+4
+1
+21
+'02) Residuo (J % K)'
+4
+1
+21
+'3) Division (J / K)'
+4
+1
+21
+'4) Suma (J + K + L)'
+4
+1
+31
+'5) Multiplicacion (J * K * L)'
+4
+1
+31
+'Cual opcion vas a elegir >>> '
+5
+1
+6
+opcion
+7
+0
+1
+31
+((opcion <=5) and (opcion >=1))
+4
+1
+52
+'El valor ingresado no esta en la lista de opciones'
+13
+4
+1
+28
+'Elegiste la opcion ',opcion
+4
+1
+32
+'Ingrese tres valores numericos'
+4
+1
+17
+'Primer numero: '
+5
+1
+1
+j
+4
+1
+18
+'Segundo numero: '
+5
+1
+1
+k
+4
+1
+17
+'tercer numero: '
+5
+1
+1
+l
+7
+0
+1
+10
+opcion = 1
+7
+0
+1
+10
+opcion = 2
+7
+0
+1
+10
+opcion = 3
+7
+0
+1
+10
+opcion = 4
+7
+0
+1
+10
+opcion = 5
+13
+6
+1
+9
+operacion
+6
+ j*k*l
+4
+1
+29
+'El resultado es: ',operacion
+13
+13
+6
+1
+9
+operacion
+5
+j+k+l
+4
+1
+29
+'El resultado es: ',operacion
+13
+13
+6
+1
+9
+operacion
+3
+j/k
+4
+1
+29
+'El resultado es: ',operacion
+13
+13
+6
+1
+9
+operacion
+7
+j mod k
+4
+1
+29
+'El resultado es: ',operacion
+13
+13
+6
+1
+9
+operacion
+3
+j+k
+4
+1
+29
+'El resultado es: ',operacion
+13
+13
+1

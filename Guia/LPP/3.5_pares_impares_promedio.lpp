@@ -1,0 +1,42 @@
+Entero num, sumapares, sumaimpares, i
+Entero promediopares, promedioimpares,diferencia, cpares, cimpares
+Real restapares, restaimpares
+inicio
+repita
+	Escriba "Ingrese un valor mayor que 10: "
+	Lea num
+hasta num>10
+sumapares<-0
+sumaimpares<-0
+cpares<-0
+cimpares<-0
+	para i<-1 hasta num haga
+		si i mod 2 = 0 entonces
+			Escriba i," es par"
+			llamar nueva_linea
+			sumapares<-sumapares+i
+			restapares<-restapares-i
+			cpares <- cpares + 1
+		sino
+			Escriba i," es impar"
+			llamar nueva_linea
+			sumaimpares <- sumaimpares + i
+			restaimpares <-restaimpares - i
+			cimpares <- cimpares + 1
+		fin si
+	fin para
+	Escriba "La suma de los pares es: ",sumapares
+	llamar nueva_linea
+	Escriba "La suma de los impares es: ",sumaimpares
+	llamar nueva_linea
+	Escriba "La resta de los pares es: ",restapares
+	llamar nueva_linea
+	Escriba "La resta de los impares es: ",restaimpares
+	llamar nueva_linea
+	Escriba "El promedio de los numeros pares es: ",sumapares / cpares
+	llamar nueva_linea
+	Escriba "El promedio de los numeros impares es: ",sumaimpares / cimpares
+	llamar nueva_linea
+	Escriba "La diferencia entre la suma de impares y pares es: ",sumaimpares - sumapares
+	llamar nueva_linea
+fin

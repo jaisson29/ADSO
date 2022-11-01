@@ -1,0 +1,15 @@
+entero a
+
+inicio
+	Escriba "Ingrese un numero: "
+	lea a
+	si (a>100)entonces
+		Escriba a," mayor que 100"
+	sino
+		si (a<100)entonces
+			Escriba a," menor que 100"
+		sino
+			Escriba "igual a 100"
+		fin si
+	fin si
+fin

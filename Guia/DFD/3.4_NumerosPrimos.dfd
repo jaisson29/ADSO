@@ -1,0 +1,81 @@
+ Dfd (c)
+1
+1
+1
+0
+0
+6
+3
+3
+num
+1
+0
+8
+contador
+1
+0
+7
+nPrimos
+1
+1
+9
+1
+13
+nPrimos <= 30
+6
+3
+3
+num
+7
+num + 1
+1
+x
+2
+ 1
+8
+contador
+1
+0
+9
+1
+8
+x <= num
+7
+0
+1
+13
+num mod x = 0
+13
+6
+1
+8
+contador
+12
+contador + 1
+13
+6
+1
+1
+x
+5
+x + 1
+11
+7
+0
+1
+12
+contador = 2
+13
+4
+1
+16
+nPrimos,'->',num
+6
+1
+7
+nPrimos
+11
+nPrimos + 1
+13
+11
+1

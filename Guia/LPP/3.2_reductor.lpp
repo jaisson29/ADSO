@@ -1,0 +1,9 @@
+Entero num
+inicio
+	num <- 200
+	mientras num > 0 haga
+		Escriba num
+		num <- num - 3
+		llamar nueva_linea
+	fin mientras
+fin

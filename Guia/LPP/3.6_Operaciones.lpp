@@ -1,0 +1,64 @@
+Entero opcion, j, k, l, operacion
+inicio
+	Escriba "Escriba un numero segun la operacion que quiere realizar"
+	Llamar nueva_linea
+	Escriba "1) Suma (J + K)"
+	Llamar nueva_linea
+	Escriba "2) Residuo (J % K)"
+	Llamar nueva_linea
+	Escriba "3) Division (J / K)"
+	Llamar nueva_linea
+	Escriba "4) Suma (J + K + L)"
+	Llamar nueva_linea
+	Escriba "5) Multiplicacion (J * K * L)"
+	Llamar nueva_linea
+	Escriba "Cual opcion vas a elegir >>> "
+	lea opcion
+	Llamar nueva_linea
+	
+	operacion <- 0
+	si (opcion <= 5) y (opcion >=1) entonces
+		llamar nueva_linea
+		Escriba "Elegiste la opcion ",opcion
+		Llamar nueva_linea
+		Escriba "Ingresa tres valores numericos"
+		Llamar nueva_linea
+		Escriba "Primer numero: "
+		lea j
+		Llamar nueva_linea
+		Escriba "Segundo numero: "
+		lea k
+		Llamar nueva_linea
+		Escriba "tercer numero: "
+		lea l
+		Llamar nueva_linea
+		si opcion = 1 entonces
+		operacion <- J+K
+		escriba "El resultado es: ",operacion
+			sino si opcion = 2 entonces
+			operacion <- j mod k
+			escriba "El resultado es: ",operacion
+			
+			sino si opcion = 3 entonces
+			operacion <- j/k
+			escriba "El resultado es: ",operacion
+			
+			sino si opcion = 4 entonces
+			operacion <- j+k+l
+			escriba "El resultado es: ",operacion
+			
+			sino si opcion = 5 entonces
+			operacion <- j*k*l
+			escriba "El resultado es: ",operacion
+			
+			
+			fin si
+			fin si
+			fin si
+			fin si
+		fin si
+	sino
+		Escriba "El valor ingresado no esta en la lista de opciones"
+	fin si
+	
+fin
