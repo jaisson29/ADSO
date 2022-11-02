@@ -26,7 +26,6 @@ using namespace std;
 	void menu4();
 	void mostrarV(int vector[],int n);
 	void cargarV(int v[],int n);
-	void mostrarM();
 	void linea(int n);
 	bool primo(int k);
 	void volver();
@@ -2238,83 +2237,128 @@ void eje_68(){
 void eje_69(){
 	//Variables
 	float notas[5][5];
-	int i;
 	
 	titulo(" MATRIZ 5X5 CON NOTAS");
-	srand(getpid());
-	for(i=0;i<5;i++){
-		for(i=0;i<5;i++){
-			
+	for(int i=0;i<5;i++){
+		for(int j=0;j<5;j++){
+			cout<<"\n\t\tIngrese una nota: ";
+			cin>>notas[i][j];
 		}
 	}
+	for(int i=0;i<5;i++){
+		for(int j=0;j<5;j++){
+			if(notas[i][j]>=3.5 and notas[i][j] <=5){
+				cout<<notas[i][j];
+			cout<<"\t";
+			}
+		}
+		cout<<endl<<endl;
+	}
+
 	volver();
 }
 
 void eje_70(){
+	//Variables
+	int nums[5][5], prom, aux, num;
 	
+	titulo(" ORDENADO DE MATRIZ");
+	//Llenado de datos
+	for(int i=0;i<5;i++){
+		for(int j=0;j<5;j++){
+			cout<<"\n\t\tIngrese una numero menor a 100: ";
+			cin>>num;
+			if(num<=100 and num>=0) nums[i][j]=num;
+			else nums[i][j]=1;
+		}
+	}
+	
+	//Ordenar de mayor a menor
+	for(int i=0;i<5;i++){
+		for(int j=0;j<5;j++){
+			for(int l=0;l<5;l++){
+				for(int k=0;k<5;k++){
+					if(nums[i][j]<nums[l][k]){
+						aux=nums[l][k];
+						nums[l][k]=nums[i][j];
+						nums[i][j]=aux;
+					}
+				}
+			}
+		}
+	}
+	//Mostrar matriz final
+	cout<<endl<<endl;
+	for(int i=0;i<5;i++){
+		for(int j=0;j<5;j++){
+			cout<<nums[i][j];
+			cout<<"\t";
+			
+		}
+		cout<<endl<<endl;
+	}
+
+	volver();
 }
 
 void eje_71(){
+	//Variables
+	int m1[3][3], m2[3][3], m3[3][3]={0}, sum;
 	
+	titulo(" OPERACION ENTRE MATRICES");
+	srand(getpid());
+	sum=0;
+	//Cargue de datos en las matrices
+	for(int i=0;i<3;i++){
+		for(int j=0;j<3;j++){
+			m1[i][j]=rand()%(10)+1;
+			m2[i][j]=rand()%(10)+1;
+		}
+	}
+	//Operacion de las amtrices
+	for(int i=0;i<3;i++){
+		for(int j=0;j<3;j++){
+			for(int k=0;k<3;k++) m3[i][j] += m1[i][k] * m2[k][j];
+		}
+	}
+	for(int i=0;i<3;i++){
+		cout<<endl<<"\t";
+		for(int j=0;j<3;j++){
+			cout<<m1[i][j];
+			cout<<"\t";
+		}
+		cout<<endl<<endl;
+	}
+	linea(80);
+	for(int i=0;i<3;i++){
+		cout<<endl<<"\t";
+		for(int j=0;j<3;j++){
+			cout<<m2[i][j];
+			cout<<"\t";
+		}
+		cout<<endl<<endl;
+	}
+	linea(80);
+	for(int i=0;i<3;i++){
+		cout<<endl<<"\t";
+		for(int j=0;j<3;j++){
+			cout<<m3[i][j]<<"\t";
+		}
+		cout<<endl<<endl;
+	}
+	//Suma de las filas de la matriz
+	cout<<"\n\tSUMA DE LAS FILAS"<<endl;
+	for(int i=0;i<3;i++){
+		sum=0;
+		for(int j=0;j<3;j++) sum+=m3[i][j];
+		cout<<"\n\t\t"<<i+1<<")Fila: "<<sum<<endl;
+	}
+	//Suma de las columnas de la matriz
+	cout<<"\n\tSUMA DE LAS COLUMNAS"<<endl;
+	for(int i=0;i<3;i++){
+		sum=0;
+		for(int j=0;j<3;j++) sum += m3[j][i];
+		cout<<"\n\t\t"<<i+1<<")Columna: "<<sum<<endl;
+	}
+	volver();
 }
-/*
-#include <stdio.h>
-
-#define FILAS_MATRIZ_B 3
-#define COLUMNAS_MATRIZ_B 2
-#define FILAS_MATRIZ_A 3
-#define COLUMNAS_MATRIZ_A 3
-
-
-    int matrizA[FILAS_MATRIZ_A][COLUMNAS_MATRIZ_A] = {
-            {3, 2, 1},
-            {1, 1, 3},213
-            {0, 2, 1},
-    };
-    int matrizB[FILAS_MATRIZ_B][COLUMNAS_MATRIZ_B] = {
-            {2, 1},
-            {1, 0},
-            {3, 2},
-    };
-
-    if (COLUMNAS_MATRIZ_A != FILAS_MATRIZ_B) {
-        printf("Columnas de matriz A deben ser igual a filas de matriz B");
-
-    }
-    //Lugar en donde se almacena el resultado
-    int producto[FILAS_MATRIZ_B][COLUMNAS_MATRIZ_B];
-
-    // Necesitamos hacer esto por cada columna de la segunda matriz (B)
-    for (int a = 0; a < COLUMNAS_MATRIZ_B; a++) {
-        // Dentro recorremos las filas de la primera (A)
-        for (int i = 0; i < FILAS_MATRIZ_A; i++) {
-            int suma = 0;
-            // Y cada columna de la primera (A)
-            for (int j = 0; j < COLUMNAS_MATRIZ_A; j++) {
-                // Multiplicamos y sumamos resultado
-                suma += matrizA[i][j] * matrizB[j][a];
-            }
-            // Lo acomodamos dentro del producto
-            producto[i][a] = suma;
-        }
-    }
-
-    // Recorrer producto
-    printf("Imprimiendo producto\n");
-    for (int i = 0; i < FILAS_MATRIZ_B; i++) {
-        for (int j = 0; j < COLUMNAS_MATRIZ_B; j++) {
-            printf("%d ", producto[i][j]);
-        }
-        printf("\n");
-    }*/
-
-
-
-
-
-
-
-
-
-
-
